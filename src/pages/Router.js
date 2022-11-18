@@ -25,11 +25,11 @@ export default function Router() {
   return (
     <div className='router'>
  <ul className="links">
- <li><Link to="/">Shop</Link></li>     
-     <li><Link to="/about">About</Link></li>
-    <li>  <Link to="/contact">Contact</Link></li>
-    <li  > < Link to="/login" >Login</Link></li>
-    <li >  <Link to="/signup">SignUp</Link></li>
+ <li><Link to="shopping_cart/">Shop</Link></li>     
+     <li><Link to="shopping_cart/about">About</Link></li>
+    <li>  <Link to="shopping_cart/contact">Contact</Link></li>
+    <li  > < Link to="shopping_cart/login" >Login</Link></li>
+    <li >  <Link to="shopping_cart/signup">SignUp</Link></li>
 
 
   <span className='icone' onClick={() => setShow(!show)}><BsCartXFill/> {length}</span>
@@ -37,14 +37,14 @@ export default function Router() {
   <div className="mainbar">
 <Routes>
 
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="login" element={<Login />} />
-        <Route path="signup" element={<Signup />} />
-        <Route path="/" element={<ShopNow />} />
-        <Route path="shop/:id" element={<ItemsDetails />} />
-        <Route path="test" element={<Test/>}/>
-        <Route path="popup" element={<Popup/>}/>
+        <Route path="shopping_cart/about" element={<About />} />
+        <Route path="shopping_cart/contact" element={<Contact />} />
+        <Route path="shopping_cart/login" element={<Login />} />
+        <Route path="shopping_cart/signup" element={<Signup />} />
+        <Route path="shopping_cart/" element={<ShopNow />} />
+        <Route path="shopping_cart/shop/:id" element={<ItemsDetails />} />
+        <Route path="shopping_cart/test" element={<Test/>}/>
+        <Route path="shopping_cart/popup" element={<Popup/>}/>
     
 
        
