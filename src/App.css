@@ -1,0 +1,80 @@
+.App {
+    width: 98%;
+    margin: auto;
+  }
+  .links{
+  
+  list-style-type: none;
+  display: flex;
+  border: 2px solid black;
+  padding: 8px;;
+  background-color: blueviolet;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  
+  font-size: calc(15px + 0.390625vw);
+  } 
+  .links li{
+  margin: 10px;
+  
+  
+  }
+  .links li a{
+  text-decoration: none;
+  color: chartreuse;
+  font-weight: bold;
+    }
+    .login{
+      margin-left: 0px;
+    }
+  
+  
+  .mainbar{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .cart{
+    border: 5px solid blue;
+    position: absolute;
+    right: 0%;
+    top: 150px;
+    background-color: beige;
+    border-radius: 5%;
+  }
+  .cart td{
+    border: 3px solid red;
+    border-radius: 5%;
+    padding: 10px;
+  }
+  .ShoppingCartIcon{
+  position: absolute;
+  right: 3%;
+  margin-top: 5px;
+  border: 2px solid red;
+  padding: auto;
+  }
+  .searchBar{
+    width: 90%;
+    margin-bottom: 8%;
+  height: 35px;
+  border: 3px solid black;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: larger;
+  }
+  .popup{
+  font-size: xx-large;
+      -webkit-animation: cssAnimation 5s forwards; 
+      animation: cssAnimation 5s forwards;
+  }
+  @keyframes cssAnimation {
+      0%   {opacity: 1;}
+      90%  {opacity: 1;}
+      100% {opacity: 0;}
+  }
+  @-webkit-keyframes cssAnimation {
+      0%   {opacity: 1;}
+      90%  {opacity: 1;}
+      100% {opacity: 0;}
+  }

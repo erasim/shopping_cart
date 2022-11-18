@@ -1,0 +1,103 @@
+.home{
+    position: absolute;
+    top: 59%;
+}
+.cart{
+    text-align: right;
+    margin-right: 20px;
+    
+}
+.cart h2{
+    border: 1px solid blue;
+
+}
+.footer{
+    margin-top: 1%;
+    width: calc(98%);
+    padding: 1%;
+    position: relative;
+    float: left;
+    background-color: rgb(5, 194, 165);
+    height: calc(100%);
+    border-radius: 10px;
+}
+.sideBar{
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    width: calc(28%);
+   padding: 1%;
+    float: left; 
+    background-color: rgb(229, 222, 17);
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.Rightbox{
+    /* min-height: 464px; */
+    margin-top: 0px;
+    padding: 1%;
+    width: calc(67.8%);
+    position: relative;
+    float: right;
+    /* background-color: rgb(65, 164, 48); */
+     text-align: center;   
+    border-radius: 10px;
+    text-align: justify;
+    text-align: center;
+}
+.Allitems{
+    /* background-color: bisque; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 10px;
+    row-gap: 10px;
+
+
+}
+.card{border: 2px solid black; width: 30%;
+text-align: center;
+
+}
+
+.card-img-top{width: 260px;height: 240px;
+
+}
+.card-title{
+    font-weight: bold;
+    height: 60px;
+}
+.card .btn-primary{
+    width: 90%;
+    vertical-align: bottom;
+    font-size: larger;
+    color: black;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    padding: 2%;
+    margin-top: 5px;
+    
+   
+}
+.card :hover{
+    width: 100%;
+}
+.icone{
+ 
+    position: absolute;
+    margin-left: 94%;
+    margin-top: 10px;
+}
+.addtocart{ margin-right: 100px; border: 1px solid black;}
+.addtocart ul{ display: flex; list-style-type: none; margin: 0px;}
+.addtocart ul li{border: 1px solid black;}
+.totalPrice{
+    text-align: center;
+    margin: 10px;
+}
+.totalPrice button{background-color: blue;
+border: none; margin-left: 20px;}
+
+   
