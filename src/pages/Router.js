@@ -19,6 +19,11 @@ export default function Router() {
   const length=inputarr.length;
   console.log(inputarr);
   const dispatch=useDispatch();
+  const url="https://rzp.io/i/zBdPrPOGW";
+  const Paynow =()=>{
+    window.open(url,'_blank');
+window.open(url);
+  }
   let sum = inputarr.reduce(function(prev, current) {
     return prev + +current.marks
   }, 0);
@@ -44,7 +49,7 @@ export default function Router() {
         <Route path="shopping_cart/" element={<ShopNow />} />
         <Route path="shopping_cart/shop/:id" element={<ItemsDetails />} />
         <Route path="shopping_cart/test" element={<Test/>}/>
-        <Route path="shopping_cart/popup" element={<Popup/>}/>
+        <Route path="/popup" element={<Popup/>}/>
     
 
        
@@ -70,7 +75,7 @@ export default function Router() {
                 )
             })
          }
-         <p className='totalPrice' >Total Amount is: ₹{sum} <button >Paynow</button></p>
+         <p className='totalPrice' >Total Amount is: ₹{sum} <button onClick={Paynow} >Paynow</button></p>
         
 </table>
 ) : null} 
