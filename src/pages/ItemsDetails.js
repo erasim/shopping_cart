@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 
 export default function ItemsDetails() {
   let { id } = useParams();
+  console.log("id console",id);
     const [Users, fetchUsers] = useState([])
     const getData = () => {
       fetch(`https://fakestoreapi.com/products/${id}`)

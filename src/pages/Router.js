@@ -47,7 +47,7 @@ window.open(url);
         <Route path="shopping_cart/login" element={<Login />} />
         <Route path="shopping_cart/signup" element={<Signup />} />
         <Route path="shopping_cart/" element={<ShopNow />} />
-        <Route path="shopping_cart/shop/:id" element={<ItemsDetails />} />
+        <Route path="/shopping_cart/:id" element={<ItemsDetails />} />
         <Route path="shopping_cart/test" element={<Test/>}/>
         <Route path="/popup" element={<Popup/>}/>
     
