@@ -37,11 +37,10 @@ window.open(url);
     <li >  <Link to="shopping_cart/signup">SignUp</Link></li>
 
 
-  <span className='icone' onClick={() => setShow(!show)}><BsCartXFill/> {length}</span>
+  <li className='icone' onClick={() => setShow(!show)}><BsCartXFill/> {length}</li>
   </ul>
   <div className="mainbar">
 <Routes>
-
         <Route path="shopping_cart/about" element={<About />} />
         <Route path="shopping_cart/contact" element={<Contact />} />
         <Route path="shopping_cart/login" element={<Login />} />
@@ -50,11 +49,7 @@ window.open(url);
         <Route path="/shopping_cart/:id" element={<ItemsDetails />} />
         <Route path="shopping_cart/test" element={<Test/>}/>
         <Route path="/popup" element={<Popup/>}/>
-    
-
-       
       </Routes> 
-   
       </div>
       <tbody>
       { show ? (

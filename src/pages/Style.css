@@ -38,9 +38,9 @@
     /* min-height: 464px; */
     margin-top: 0px;
     padding: 1%;
-    width: calc(67.8%);
-    position: relative;
-    float: right;
+    /* width: calc(67.8%); */
+    position: absolute;
+
     /* background-color: rgb(65, 164, 48); */
      text-align: center;   
     border-radius: 10px;
@@ -57,17 +57,20 @@
 
 
 }
-.card{border: 2px solid black; width: 30%;
+.card{border: 2px solid black; 
 text-align: center;
+width: 250px;
+padding: 5px;
+
 
 }
 
-.card-img-top{width: 260px;height: 240px;
+.card-img-top{height: 200px;}
 
-}
-.card-title{
+
+.card-title{position: relative;
     font-weight: bold;
-    height: 60px;
+   height: 160px;
 }
 .card .btn-primary{
     width: 90%;
@@ -82,14 +85,17 @@ text-align: center;
    
 }
 .card :hover{
-    width: 100%;
+    width: 90%;
 }
 .icone{
- 
-    position: absolute;
-    margin-left: 94%;
-    margin-top: 10px;
+ position:initial;
+ float: right;
+    /* position: absolute;
+    margin-left: 64%;
+    margin-top: 0px; */
 }
+.card button{ position:relative;
+bottom: 0px;}
 .addtocart{ margin-right: 100px; border: 1px solid black;}
 .addtocart ul{ display: flex; list-style-type: none; margin: 0px;}
 .addtocart ul li{border: 1px solid black;}

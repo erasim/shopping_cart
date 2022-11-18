@@ -1,5 +1,4 @@
 import React from 'react'
-import Home from './pages/home'
 import Cart from './pages/cart'
 import Router from './pages/Router'
 import "./pages/Style.css";
@@ -14,10 +13,10 @@ export default function App() {
     <div>
   
       <Router/>
-    
+{/*     
 <SideBar/>
 
-  
+   */}
     </div>
   )
 }
