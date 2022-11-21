@@ -26,7 +26,7 @@ export default function ShopNow() {
         fetchUsers(res);
       });
   };
-
+// test comment
   useEffect(() => {
     getData();
   }, []);
