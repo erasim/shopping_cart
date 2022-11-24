@@ -103,3 +103,7 @@ border: none; margin-left: 20px;}
     font-size: 30px;
     margin-right: 30px;
 }
+.bg-light {
+    background-color: coral;
+}
+.icone {font-size: xx-large;}
