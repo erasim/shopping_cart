@@ -70,7 +70,7 @@ export default function ShopNow() {
               >
                 Add To Card
               </Button>
-              <br />
+              <br/>
               <Button
                 variant="primary"
                 onClick={() => {

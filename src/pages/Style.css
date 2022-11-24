@@ -99,4 +99,7 @@ bottom: 0px;}
 .totalPrice button{background-color: blue;
 border: none; margin-left: 20px;}
 
-   
+.navbar-light .navbar-nav .nav-link{
+    font-size: 30px;
+    margin-right: 30px;
+}
