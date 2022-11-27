@@ -17,9 +17,10 @@
     padding: 1%;
     position: relative;
     float: left;
-    background-color: rgb(5, 194, 165);
+    background-color:#6495ed;
     height: calc(100%);
     border-radius: 10px;
+    text-align: center;
 }
 .sideBar{
     position: absolute;
@@ -107,3 +108,16 @@ border: none; margin-left: 20px;}
     background-color: coral;
 }
 .icone {font-size: xx-large;}
+.catagory{text-align: center;
+width: 100%;
+}
+.catagory button{margin: 8px;}
+.catitems{    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin: 10px;
+}
+.catitems .card{margin: 1%;}
+.catlist{
+margin-top: 15px;
+}

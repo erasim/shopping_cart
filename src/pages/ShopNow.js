@@ -4,7 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from 'react-redux'
-import { addItem, removeItem  } from './state/action-creater';
+import { addItem} from './state/action-creater';
 
 export default function ShopNow() {
   const [Users, fetchUsers] = useState([]);
@@ -22,13 +22,14 @@ export default function ShopNow() {
     fetch("https://fakestoreapi.com/products/")
       .then((res) => res.json())
       .then((res) => {
-        // console.log(res);
+        console.log(res);
         fetchUsers(res);
       });
   };
 // test comment
   useEffect(() => {
     getData();
+    
   }, []);
 
   return (
@@ -67,8 +68,8 @@ export default function ShopNow() {
                   let marks = item.price;
                   dispatch(addItem({name, marks}))
                 }}
-              >
-                Add To Card
+               >
+               Add To Card
               </Button>
               <br/>
               <Button

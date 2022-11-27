@@ -4,9 +4,9 @@ import React from 'react'
 export default function Footer() {
   return (
     <div className='footer'>
-    <h2>Welcome to the Footer Page!</h2>
-    <p>You can do this, I believe in you.</p>
-    <p>You can do this, I believe in you.</p>
+    <h2>Copyright © asim shopping cart 2022</h2>
+    <h4>Inspring the new world..</h4>
+   
 </div>
   )
 }

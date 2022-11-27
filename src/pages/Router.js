@@ -1,19 +1,19 @@
 import React, { useState } from 'react'
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import ShopNow from './ShopNow'
 import About from './About';
 import Contact from './Contact';
 import Login from './Login';
-import Signup from './Signup';
 import ItemsDetails from './ItemsDetails';
 import Test from './Test';
 import Popup from './Popup';
 import { useSelector } from 'react-redux';
-import AddToCard from './AddtoCard';
 import { BsCartXFill } from "react-icons/bs";
 import { removeItem } from './state/action-creater';
 import { useDispatch } from 'react-redux'
+import Footer from './Footer';
+import Catagory from './Category';
 export default function Router() {
   const [show, setShow] = useState(false);
   const inputarr = useSelector(state => state.inputarr)
@@ -39,30 +39,19 @@ export default function Router() {
             <Nav.Link href="/shopping_cart/about">About</Nav.Link>
             <Nav.Link href="/shopping_cart/contact">Contact</Nav.Link>
             <Nav.Link href="/shopping_cart/login">Login</Nav.Link>
-            <Nav.Link href="/shopping_cart/signup">SignUp</Nav.Link>
+            <Nav.Link href="/shopping_cart/catagory">Catagory</Nav.Link>
           </Nav>
         </Navbar.Collapse>
                     <Nav.Link href="#"><span className='icone' onClick={() => setShow(!show)}><BsCartXFill /> {length}</span></Nav.Link>
       </Container>
     </Navbar>
 
-
-      {/* <ul className="links">
-        <li><Link to="shopping_cart/">Shop</Link></li>
-        <li><Link to="shopping_cart/about">About</Link></li>
-        <li>  <Link to="shopping_cart/contact">Contact</Link></li>
-        <li  > < Link to="shopping_cart/login" >Login</Link></li>
-        <li >  <Link to="shopping_cart/signup">SignUp</Link></li>
-
-
-        <li className='icone' onClick={() => setShow(!show)}><BsCartXFill /> {length}</li>
-      </ul> */}
       <div className="mainbar">
         <Routes>
           <Route path="shopping_cart/about" element={<About />} />
           <Route path="shopping_cart/contact" element={<Contact />} />
           <Route path="shopping_cart/login" element={<Login />} />
-          <Route path="shopping_cart/signup" element={<Signup />} />
+          <Route path="shopping_cart/catagory/" element={<Catagory />} />
           <Route path="shopping_cart/" element={<ShopNow />} />
           <Route path="/shopping_cart/:id" element={<ItemsDetails />} />
           <Route path="shopping_cart/test" element={<Test />} />
@@ -97,6 +86,7 @@ export default function Router() {
       </tbody>
       {
       }
+      <Footer/>
 
     </div>
 
