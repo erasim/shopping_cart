@@ -7,7 +7,6 @@ import Contact from './Contact';
 import Login from './Login';
 import ItemsDetails from './ItemsDetails';
 import Test from './Test';
-import Popup from './Popup';
 import { useSelector } from 'react-redux';
 import { BsCartXFill } from "react-icons/bs";
 import { removeItem } from './state/action-creater';
@@ -55,7 +54,7 @@ export default function Router() {
           <Route path="shopping_cart/" element={<ShopNow />} />
           <Route path="/shopping_cart/:id" element={<ItemsDetails />} />
           <Route path="shopping_cart/test" element={<Test />} />
-          <Route path="/popup" element={<Popup />} />
+       
         </Routes>
       </div>
       <tbody>
