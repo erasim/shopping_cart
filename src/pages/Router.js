@@ -39,7 +39,7 @@ export default function Router() {
             <Nav.Link href="/shopping_cart/about">About</Nav.Link>
             <Nav.Link href="/shopping_cart/contact">Contact</Nav.Link>
             <Nav.Link href="/shopping_cart/login">Login</Nav.Link>
-            <Nav.Link href="/shopping_cart/catagory">Catagory</Nav.Link>
+            {/* <Nav.Link href="/shopping_cart/catagory">Catagory</Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
                     <Nav.Link href="#"><span className='icone' onClick={() => setShow(!show)}><BsCartXFill /> {length}</span></Nav.Link>
