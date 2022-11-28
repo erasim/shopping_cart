@@ -60,7 +60,7 @@ export default function Category({setListType}) {
           }}>{item.toUpperCase()}</Button>
         ))}
       </div>
-      <div className="catitems">
+      <div className="Allitems">
         {Catagoryitem.map((item) => (
           <Card key={item.id}>
             <Card.Img variant="top" src={item.image} />
