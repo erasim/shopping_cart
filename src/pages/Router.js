@@ -13,6 +13,8 @@ import { removeItem } from './state/action-creater';
 import { useDispatch } from 'react-redux'
 import Footer from './Footer';
 import Catagory from './Category';
+import SignIn from './Login';
+import Afterlogin from './Afterlogin';
 export default function Router() {
   const [show, setShow] = useState(false);
   const inputarr = useSelector(state => state.inputarr)
@@ -54,6 +56,8 @@ export default function Router() {
           <Route path="shopping_cart/" element={<ShopNow />} />
           <Route path="/shopping_cart/:id" element={<ItemsDetails />} />
           <Route path="shopping_cart/test" element={<Test />} />
+          <Route path="shopping_cart/sign-in" element={< SignIn/>} />
+          <Route path="shopping_cart/after-login" element={< Afterlogin/>} />
        
         </Routes>
       </div>
