@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route,Link} from "react-router-dom";
 import ShopNow from './ShopNow'
 import About from './About';
 import Contact from './Contact';
@@ -36,16 +36,18 @@ export default function Router() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/shopping_cart/">Shop</Nav.Link>
-            <Nav.Link href="/shopping_cart/about">About</Nav.Link>
-            <Nav.Link href="/shopping_cart/contact">Contact</Nav.Link>
-            <Nav.Link href="/shopping_cart/login">Login</Nav.Link>
+            <Nav.Link to="/shopping_cart/">Shop</Nav.Link>
+            <Nav.Link to="/shopping_cart/about">About</Nav.Link>
+            <Nav.Link to="/shopping_cart/contact">Contact</Nav.Link>
+            <Nav.Link to="/shopping_cart/login">Login</Nav.Link>
             {/* <Nav.Link href="/shopping_cart/catagory">Catagory</Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
                     <Nav.Link href="#"><span className='icone' onClick={() => setShow(!show)}><BsCartXFill /> {length}</span></Nav.Link>
       </Container>
+     
     </Navbar>
+    
 
       <div className="mainbar">
         <Routes>
