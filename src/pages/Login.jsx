@@ -9,9 +9,7 @@ export default function SignIn() {
     email: "",
     password: "",
   });
-  const [section, setSection]=(sessionStorage.getItem("name"))
-  var value2=sessionStorage.getItem(section)
-  console.log(value2);
+ 
   const { email, password } = formData;
   const navigate = useNavigate();
   function onChange(e) {
