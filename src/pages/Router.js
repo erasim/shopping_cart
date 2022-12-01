@@ -39,7 +39,12 @@ export default function Router() {
             <Link to="/shopping_cart/">Shop</Link>
             <Link to="/shopping_cart/about">About</Link>
             <Link to="/shopping_cart/contact">Contact</Link>
+         
+           
+          
+    
             <Link to="/shopping_cart/login">Login</Link>
+      
             {/* <Nav.Link href="/shopping_cart/catagory">Catagory</Nav.Link> */}
           </Nav>
         </Navbar.Collapse>

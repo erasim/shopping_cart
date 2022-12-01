@@ -16,7 +16,7 @@ export default function Category({setListType}) {
     fetch(`https://fakestoreapi.com/products/category/${Catname}`)
       .then((res) => res.json())
       .then((res) => {
-        console.log("asas =======> ", res);
+    
         fetchCatagoryitem(res);
       });
   }, [Catname])

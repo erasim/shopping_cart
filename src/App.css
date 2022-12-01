@@ -83,3 +83,4 @@
   /* Navbar */
 .navbar-nav a{font-size: xxx-large;margin-right: 5%; color: coral;
 }
+.mainbar {justify-content: center; height: 1000px; margin-top: 10vh;}
