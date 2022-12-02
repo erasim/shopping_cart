@@ -8,18 +8,19 @@ import Login from './Login';
 import ItemsDetails from './ItemsDetails';
 import Test from './Test';
 import { useSelector } from 'react-redux';
-import { BsCartXFill } from "react-icons/bs";
+import { BsFileEarmarkExcelFill,BsCartPlusFill} from "react-icons/bs";
 import { removeItem } from './state/action-creater';
 import { useDispatch } from 'react-redux'
 import Footer from './Footer';
 import Catagory from './Category';
 import SignIn from './Login';
 import Afterlogin from './Afterlogin';
+import {Button, Card} from 'react-bootstrap/';
 export default function Router() {
   const [show, setShow] = useState(false);
   const inputarr = useSelector(state => state.inputarr)
   const length = inputarr.length;
-  console.log(inputarr);
+  // console.log(inputarr);
   const dispatch = useDispatch();
   const url = "https://rzp.io/i/zBdPrPOGW";
   const Paynow = () => {
@@ -29,6 +30,64 @@ export default function Router() {
   let sum = inputarr.reduce(function (prev, current) {
     return prev + +current.marks
   }, 0);
+// Razorpay start
+var formatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "INR",
+
+  // These options are needed to round to whole numbers if that's what you want.
+  minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
+  //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
+});
+const loadScript = (src) => {
+  return new Promise((resovle) => {
+    const script = document.createElement("script");
+    script.src = src;
+
+    script.onload = () => {
+      resovle(true);
+    };
+
+    script.onerror = () => {
+      resovle(false);
+    };
+
+    document.body.appendChild(script);
+  });
+};
+
+ const displayRazorpay = async (amount) => {
+  const res = await loadScript(
+    "https://checkout.razorpay.com/v1/checkout.js"
+  );
+
+  if (!res) {
+    alert("You are offline... Failed to load Razorpay SDK");
+    return;
+  }
+
+  const options = {
+    key: "rzp_live_aMFNd3UamMlBzo",
+    currency: "INR",
+    amount: sum * 100,
+    name: "Paynow",
+    description: "Thanks for purchasing",
+    image:
+      "https://upload.wikimedia.org/wikipedia/en/thumb/8/89/Razorpay_logo.svg/1896px-Razorpay_logo.svg.png",
+
+    handler: function (response) {
+      alert(response.razorpay_payment_id);
+      alert("Payment Successfully");
+    },
+    prefill: {
+      name: "asim hasnain zaidi",
+    },
+  };
+
+  const paymentObject = new window.Razorpay(options);
+  paymentObject.open();
+};
+// Razorpay End
   return (
     <div className='router'>
 <Navbar bg="light" expand="lg">
@@ -48,7 +107,7 @@ export default function Router() {
             {/* <Nav.Link href="/shopping_cart/catagory">Catagory</Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
-                    <Nav.Link href="#"><span className='icone' onClick={() => setShow(!show)}><BsCartXFill /> {length}</span></Nav.Link>
+                    <Nav.Link href="#"><span className='icone' onClick={() => setShow(!show)}><BsCartPlusFill /> {length}</span></Nav.Link>
       </Container>
      
     </Navbar>
@@ -65,6 +124,7 @@ export default function Router() {
           <Route path="shopping_cart/test" element={<Test />} />
           <Route path="shopping_cart/sign-in" element={< SignIn/>} />
           <Route path="shopping_cart/after-login" element={< Afterlogin/>} />
+          {/* <Route path="shopping_cart/pay" element={<Razorpay/>} /> */}
        
         </Routes>
       </div>
@@ -79,16 +139,18 @@ export default function Router() {
 
                   <tr key={i}>
                     <td>{info.name}</td>
-                    <td>{info.marks}</td>
+                    <td>{formatter.format(info.marks)}</td>
 
                     <td><button onClick={() => {
                       dispatch(removeItem({ i }))
-                    }}>Remove</button></td>
+                    }}><BsFileEarmarkExcelFill/></button></td>
                   </tr>
                 )
               })
             }
-            <p className='totalPrice' >Total Amount is: ₹{sum} <button onClick={Paynow} >Paynow</button></p>
+            
+            <p className='totalPrice' >Total Amount is: {formatter.format(sum)}
+            <Button onClick={displayRazorpay}>Pay With Razorpay</Button></p>
 
           </table>
         ) : null}

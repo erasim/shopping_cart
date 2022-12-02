@@ -3,8 +3,7 @@
     top: 59%;
 }
 .cart{
-    text-align: right;
-    margin-right: 20px;
+
     
 }
 .cart h2{
@@ -96,9 +95,11 @@ bottom: 0px;}
 .totalPrice{
     text-align: center;
     margin: 10px;
+    font-size: large;
+    font-weight: bold;
 }
-.totalPrice button{background-color: blue;
-border: none; margin-left: 20px;}
+.totalPrice button{font-size: larger;
+border: none; margin-left: 25px;}
 
 .navbar-light .navbar-nav .nav-link{
     font-size: 30px;

@@ -40,9 +40,9 @@
     border: 1px solid blue;
     position: absolute;
     right: 0%;
-    top: 150px;
+    top: 99px;
     background-color: beige;
-    border-radius: 5%;
+    border-radius: 0%;
   }
   .cart td{
     border: 1px solid blue;
