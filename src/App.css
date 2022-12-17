@@ -35,7 +35,7 @@
     display: flex;
     flex-direction:initial;
   }
-  .router{width: 100%; margin: 5px;}
+  .router{width: 100%;}
   .cart{
     border: 1px solid blue;
     position: absolute;
@@ -64,7 +64,7 @@
   border-radius: 10px;
   font-weight: bold;
   font-size: larger;
-  }
+  }f
   .popup{
   font-size: xx-large;
       -webkit-animation: cssAnimation 5s forwards; 
@@ -83,5 +83,5 @@
   /* Navbar */
 .navbar-nav a{font-size: xxx-large;margin-right: 5%; color: coral;
 }
-.mainbar {justify-content: center; height: 1000px; margin-top: 10vh;}
+.mainbar {justify-content: center; margin-top: 10vh;}
 .mx-auto{margin: 20px;}

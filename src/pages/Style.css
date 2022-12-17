@@ -2,37 +2,22 @@
     position: absolute;
     top: 59%;
 }
-.cart{
 
-    
-}
 .cart h2{
     border: 1px solid blue;
 
 }
 .footer{
-    margin-top: 1%;
-    width: calc(98%);
-    padding: 1%;
-    position: relative;
-    float: left;
+    
+    width: 100%;
+ 
+
     background-color:#6495ed;
-    height: calc(100%);
+   
     border-radius: 10px;
     text-align: center;
 }
-.sideBar{
-    position: absolute;
-    top: 20%;
-    text-align: center;
-    width: calc(28%);
-   padding: 1%;
-    float: left; 
-    background-color: rgb(229, 222, 17);
-    display: flex;
-    flex-direction: column;
-  
-}
+
 
 .Rightbox{
     width: 100%;

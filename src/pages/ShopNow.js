@@ -13,6 +13,7 @@ export default function ShopNow() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [searchitem, setSearch] = useState("");
+ 
   const [listType, setListType] = useState("");
 
   const showToastMessage = () => {
@@ -25,7 +26,7 @@ export default function ShopNow() {
     fetch("https://fakestoreapi.com/products/")
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
+     
         fetchUsers(res);
       });
   };
@@ -34,6 +35,19 @@ export default function ShopNow() {
     getData();
 
   }, []);
+
+
+
+const filterdata=Users.filter((val)=>{
+  let data=val;
+  if(searchitem !==""){
+     data=val.title.toLowerCase().includes(searchitem.toLowerCase())
+  }
+  return data;  
+})
+
+
+
 
   return (
     <div className="Rightbox">
@@ -60,15 +74,7 @@ export default function ShopNow() {
           <h2>Shopping List</h2>
           <div className="Allitems">
 
-            {Users.filter((value) => {
-              if (searchitem === "") {
-                return value;
-              } else if (
-                value.title.toLowerCase().includes(searchitem.toLowerCase())
-              ) {
-                return value;
-              }
-            }).map((item) => (
+            {filterdata.map((item) => (
               <Card key={item.id}>
                 <Card.Img variant="top" src={item.image} />
                 <Card.Body>

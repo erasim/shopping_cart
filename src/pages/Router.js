@@ -11,22 +11,17 @@ import { useSelector } from 'react-redux';
 import { BsFileEarmarkExcelFill,BsCartPlusFill} from "react-icons/bs";
 import { removeItem } from './state/action-creater';
 import { useDispatch } from 'react-redux'
-import Footer from './Footer';
 import Catagory from './Category';
 import SignIn from './Login';
 import Afterlogin from './Afterlogin';
-import {Button, Card} from 'react-bootstrap/';
+import {Button} from 'react-bootstrap/';
 export default function Router() {
   const [show, setShow] = useState(false);
   const inputarr = useSelector(state => state.inputarr)
   const length = inputarr.length;
   // console.log(inputarr);
   const dispatch = useDispatch();
-  const url = "https://rzp.io/i/zBdPrPOGW";
-  const Paynow = () => {
-    window.open(url, '_blank');
-    window.open(url);
-  }
+
   let sum = inputarr.reduce(function (prev, current) {
     return prev + +current.marks
   }, 0);
@@ -112,8 +107,8 @@ const loadScript = (src) => {
      
     </Navbar>
     
-
-      <div className="mainbar">
+<div>
+       <div className="mainbar">
         <Routes>
           <Route path="shopping_cart/about" element={<About />} />
           <Route path="shopping_cart/contact" element={<Contact />} />
@@ -127,6 +122,8 @@ const loadScript = (src) => {
           {/* <Route path="shopping_cart/pay" element={<Razorpay/>} /> */}
        
         </Routes>
+      </div> 
+
       </div>
       <tbody>
         {show ? (
@@ -158,7 +155,7 @@ const loadScript = (src) => {
       </tbody>
       {
       }
-      <Footer/>
+    
 
     </div>
 
